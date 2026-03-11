@@ -4,13 +4,20 @@
 #3 remove punctuations
 import string
 from collections import Counter
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+# Add 'stopwords' to the download list
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import matplotlib.pyplot as plt
 text = open('Read.txt', encoding= 'utf-8').read()
 lower_case = text.lower()
-import nltk
+
 
 # These downloads ensure the cloud server has the required models
 nltk.download('punkt')
