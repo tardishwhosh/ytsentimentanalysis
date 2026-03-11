@@ -4,6 +4,7 @@
 #3 remove punctuations
 import string
 from collections import Counter
+import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
