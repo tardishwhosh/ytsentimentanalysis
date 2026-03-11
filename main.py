@@ -10,7 +10,13 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import matplotlib.pyplot as plt
 text = open('Read.txt', encoding= 'utf-8').read()
 lower_case = text.lower()
+import nltk
 
+# These downloads ensure the cloud server has the required models
+nltk.download('punkt')
+nltk.download('punkt_tab') 
+
+from nltk.tokenize import word_tokenize
 cleaned_text = lower_case.translate(str.maketrans('', '', string.punctuation)) #lower case to a string without punctuations
 
 
